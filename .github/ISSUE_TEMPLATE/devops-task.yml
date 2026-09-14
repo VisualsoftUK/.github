@@ -2,7 +2,7 @@ name: DevOps Task
 description: Request an action that requires DevOps access or ownership
 title: "[DevOps] "
 labels: []
-type: Task
+type: DevOpsTask
 body:
   - type: markdown
     attributes:

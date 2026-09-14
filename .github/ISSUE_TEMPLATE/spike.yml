@@ -2,7 +2,7 @@ name: Spike / Investigation
 description: Investigate an unknown before production work is planned
 title: "[Spike] "
 labels: []
-type: Task
+type: Spike
 body:
   - type: markdown
     attributes:
