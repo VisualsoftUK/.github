@@ -1,0 +1,50 @@
+name: Bug
+description: Report a defect with reproduction details
+title: "[Bug] "
+labels: []
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A Bug is a **failed behaviour** compared to an agreed baseline — design spec, shipped behaviour, or a version that used to work.
+
+        Policy will halt polish or layout taste filed as a defect (e.g. equal-height cards with no blocked action). If the honest report is nicer alignment or extra chrome, file a Feature or Task instead.
+
+        Functional refinement will pause intake if the failure is vague (e.g. "button broken" without where, or what should happen instead). Say **where**, **what you expected**, and **what happened**.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong? Include screen/URL/flow and the control involved if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser, app version, store, user role, etc.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps if known (optional if expected vs actual below is clear)
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: Expected vs actual
+      description: What should happen, and what happens instead? For layout issues, link design spec or say when it last worked correctly.
+  - type: markdown
+    attributes:
+      value: |
+        ## Gate A — Functional Refinement
+
+        _Agent will structure environment / repro / expected vs actual once context is sufficient_
+
+        ## Gate B — Technical Refinement
+
+        _Agent will isolate files and propose verification (use an existing test suite if one is present)_
+
+        ## Gate C — Design / Notes
+
+        _Optional_

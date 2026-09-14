@@ -1,0 +1,70 @@
+name: Spike / Investigation
+description: Investigate an unknown before production work is planned
+title: "[Spike] "
+labels: []
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use a Spike when more knowledge is needed before production work can be scoped.
+
+        A Spike produces findings and a recommendation, not production code. Any proof of concept should be disposable unless follow-up work explicitly adopts it.
+  - type: textarea
+    id: core_question
+    attributes:
+      label: Objective / core question
+      description: What is the single question this investigation must answer?
+      placeholder: Can we support … within the current architecture?
+    validations:
+      required: true
+  - type: textarea
+    id: desired_outcomes
+    attributes:
+      label: Desired outcomes
+      description: What evidence or decisions must the Spike produce before it can be closed?
+      value: |
+        - [ ] Written summary of findings
+        - [ ] Go / No-Go recommendation
+        - [ ] Proof-of-concept branch linked (if applicable)
+        - [ ] Follow-up Features or Tasks created with estimates (if applicable)
+    validations:
+      required: true
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox
+      description: Maximum amount of time to spend on this investigation.
+      placeholder: e.g. 4 hours
+    validations:
+      required: true
+  - type: textarea
+    id: investigation_plan
+    attributes:
+      label: Investigation plan
+      description: List the documentation, experiments, edge cases, or architecture areas to investigate.
+      placeholder: |
+        1. Review …
+        2. Test …
+        3. Compare …
+    validations:
+      required: true
+  - type: textarea
+    id: technical_details
+    attributes:
+      label: Technical details
+      description: Include impacted repositories/services, relevant configuration, constraints, and useful resources.
+  - type: markdown
+    attributes:
+      value: |
+        ## Gate A — Functional Refinement
+
+        _Agent will clarify the core question, desired outcomes, and boundaries_
+
+        ## Gate B — Technical Refinement
+
+        _Agent will refine the investigation plan, dependencies, risks, and verification approach_
+
+        ## Gate C — Design / Notes
+
+        _Optional_
