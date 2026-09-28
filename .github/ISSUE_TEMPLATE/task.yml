@@ -9,6 +9,6 @@ body:
     attributes:
       label: Description
       description: Describe the task, why it is needed, and how you will know it is done.
-      placeholder: e.g. Merchant cannot save button radius / Composer bump / sub-issue of #12
+      placeholder: e.g. Merchant cannot save button radius / dependency bump
     validations:
       required: true
