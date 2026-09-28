@@ -2,35 +2,13 @@ name: DevOps Task
 description: Request an action that requires DevOps access or ownership
 title: "[DevOps] "
 labels: []
-type: DevOpsTask
+type: DevOps
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Use this template when the DevOps team must perform an action that Engineering cannot complete because of permissions or platform ownership.
-
-        Examples include changing metadata, repository or organisation settings, protected environments, permissions, secrets, or other managed infrastructure.
-
-        Do not paste credentials, tokens, secret values, customer data, or other sensitive information into this issue. Share them through an approved secure channel if required.
   - type: textarea
-    id: requested_action
+    id: description
     attributes:
-      label: Requested action
-      description: State exactly what DevOps needs to change or perform.
+      label: Description
+      description: Describe the action DevOps needs to take. Do not include credentials, tokens, secret values, or customer data.
       placeholder: Update the metadata for … / Enable the GitHub setting …
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: |
-        ## Gate A — Request Refinement
-
-        _Agent will clarify the requested action, reason, ownership, and acceptance criteria_
-
-        ## Gate B — DevOps Refinement
-
-        _DevOps will confirm the implementation plan, risk, timing, verification, and rollback_
-
-        ## Gate C — Completion Notes
-
-        _Record the completed action and verification evidence without exposing sensitive values_
