@@ -4,49 +4,11 @@ title: "[Task] "
 labels: []
 type: Task
 body:
-  - type: markdown
-    attributes:
-      value: |
-        State the objective and definition of done. Design review is usually waved through unless UI components change.
-
-        If the outcome is nicer layout, extra chrome, or a prescribed widget (modal, dropdown, always-visible label) and nobody gains a new action, Policy will likely halt this as out of product scope.
-
-        If this implements an already-approved Feature, add this issue as a GitHub sub-issue of that Feature (the parent must already have `policy-checked`). A sentence in the body is not enough.
   - type: textarea
-    id: stuck
+    id: description
     attributes:
-      label: What can someone not do today?
-      description: Product persona and blocked action. Official company/department/app identity swaps can be “not applicable — official rename”. Implementation slices of a policy-checked Feature can be “not applicable — sub-issue of #N” (the GitHub parent link is what counts). If the honest answer is nicer alignment, nicer branding, extra confirmation, or always-visible chrome, this is probably out of scope.
-      placeholder: e.g. Merchant cannot save button radius / not applicable — official rename / Composer bump / not applicable — sub-issue of #12
+      label: Description
+      description: Describe the task, why it is needed, and how you will know it is done.
+      placeholder: e.g. Merchant cannot save button radius / Composer bump / sub-issue of #12
     validations:
       required: true
-  - type: textarea
-    id: objective
-    attributes:
-      label: Objective
-      description: What should change and why (perf, deprecation, cleanup)?
-    validations:
-      required: true
-  - type: textarea
-    id: dod
-    attributes:
-      label: Definition of Done
-      description: How will we know this is complete?
-  - type: textarea
-    id: systems
-    attributes:
-      label: Impacted systems / modules
-  - type: markdown
-    attributes:
-      value: |
-        ## Gate A — Functional Refinement
-
-        _Agent will structure objective / DoD / impacted systems_
-
-        ## Gate B — Technical Refinement
-
-        _Agent will scope files/dependencies and verification steps_
-
-        ## Gate C — Design / Notes
-
-        _Optional_

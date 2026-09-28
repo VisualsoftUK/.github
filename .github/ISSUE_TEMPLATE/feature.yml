@@ -4,49 +4,11 @@ title: "[Feature] "
 labels: []
 type: Feature
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Describe the user problem first. Lifecycle agents will fill Gate A (functional), Gate B (technical), and design triage automatically where possible.
-
-        A Feature is a request. Policy checks it against the app charter (does not / will never / interaction rules) and does not halt it for being speculative or for proposing UI. Design Applicability still decides if a designer is needed.
-
-        If you will break this into Tasks, open this Feature first and wait until it is `policy-checked`. Then file those Tasks as GitHub sub-issues of this Feature. Policy treats linked children as implementation slices. Writing “part of the new feature” in a Task body is not enough.
-
-        If this job is not yet in the app charter, Policy will add a Charter catch-up note. After it ships, update `.github/PRODUCT_STRATEGY.md`.
   - type: textarea
-    id: stuck
+    id: description
     attributes:
-      label: What can the user not do today?
-      description: Who is stuck (shopper, merchant, …) and what job they cannot complete.
+      label: Description
+      description: Describe the feature. Who is stuck, and what should they be able to do?
       placeholder: As a merchant, I cannot …
     validations:
       required: true
-  - type: textarea
-    id: summary
-    attributes:
-      label: Proposed change
-      description: What should we build? Optional UI detail — design owns interaction if the capability is real.
-      placeholder: Optional — e.g. add a way to choose which list from the product page
-  - type: markdown
-    attributes:
-      value: |
-        ## Gate A — Functional Refinement
-
-        ### 📖 User Story
-
-        _To be filled by Functional Refinement Agent_
-
-        ### 🎯 Acceptance Criteria
-
-        *To be considered 'Done', this task must meet the following:*
-
-        - [ ] TBD
-
-        ## Gate B — Technical Refinement
-
-        _To be filled by Technical Refinement Agent_
-
-        ## Gate C — Design / Notes
-
-        _Optional human notes_
